@@ -9,12 +9,7 @@ public class Emitente {
 	private String rg;
 	private BYTE_ARRAY assinatura;
 
-	public Emitente(String cpf, String nome, String rg, BYTE_ARRAY assinatura) {
-		super();
-		this.cpf = cpf;
-		this.nome = nome;
-		this.rg = rg;
-		this.assinatura = assinatura;
+	public Emitente() {
 	}
 
 	public String getCpf() {
@@ -49,4 +44,14 @@ public class Emitente {
 		this.assinatura = assinatura;
 	}
 
-}
+	public String getCpfFormatado() {
+		String cpfFormatado = cpf;
+		if (cpfFormatado.length() == 11) {
+			cpfFormatado = cpfFormatado.substring(0, 3) + "." + cpfFormatado.substring(3, 6) + "."
+					+ cpfFormatado.substring(6, 9) + "-" + cpfFormatado.substring(9, 11);
+			return cpfFormatado;
+		}
+		return null;
+		}
+	}
+

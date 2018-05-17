@@ -5,10 +5,7 @@ public class Cidade {
 	private String nome;
 	private Uf uf;
 
-	public Cidade(String nome, Uf uf) {
-		super();
-		this.nome = nome;
-		this.uf = uf;
+	public Cidade() {
 	}
 
 	public String getNome() {

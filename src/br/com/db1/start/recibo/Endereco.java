@@ -10,6 +10,10 @@ public class Endereco {
 	private TipoLogradouro tipoLogradouro;
 	private Cidade cidade;
 
+	public Endereco() {
+
+	}
+
 	public Endereco(String logradouro, String numero, String complemento, String bairro, Integer cep, Cidade cidade,
 			TipoLogradouro tipologradouro) {
 		super();
@@ -77,4 +81,10 @@ public class Endereco {
 	public void setTipoLogradouro(TipoLogradouro tipoLogradouro) {
 		this.tipoLogradouro = tipoLogradouro;
 	}
+
+	public String getCepFormatado() {
+		String cepFormatado = cep.toString();
+		return cepFormatado.substring(0, 5) + "-" + cepFormatado.substring(5, 8);
+	}
+
 }

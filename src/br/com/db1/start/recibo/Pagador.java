@@ -5,10 +5,7 @@ public class Pagador {
 	private String nome;
 	private Endereco endereco;
 
-	public Pagador(String nome, Endereco endereco) {
-		super();
-		this.nome = nome;
-		this.endereco = endereco;
+	public Pagador() {
 	}
 
 	public String getNome() {

@@ -5,10 +5,7 @@ public class Servico {
 	private String nome;
 	private Double valorUnitario;
 
-	public Servico(String nome, Double valorUnitario) {
-		super();
-		this.nome = nome;
-		this.valorUnitario = valorUnitario;
+	public Servico() {
 	}
 
 	public String getNome() {

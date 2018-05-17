@@ -1,6 +1,7 @@
 package br.com.db1.start.recibo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Recibo {
 
@@ -11,20 +12,10 @@ public class Recibo {
 	private Date dataEmissao;
 	private Emitente emitente;
 	private Pagador pagador;
-	private Servico servico;
+	private List<Servico> servico;
 	private Cidade cidade;
 
-	public Recibo(Integer numero, Double valor, Date dataCadastro, Boolean confirmacao, Date dataEmissao,
-			Emitente emitente, Pagador pagador, Servico servico, Cidade cidade) {
-		this.numero = numero;
-		this.valor = valor;
-		this.dataCadastro = dataCadastro;
-		this.confirmacao = confirmacao;
-		this.dataEmissao = dataEmissao;
-		this.emitente = emitente;
-		this.pagador = pagador;
-		this.servico = servico;
-		this.cidade = cidade;
+	public Recibo() {
 	}
 
 	public Integer getNumero() {
@@ -101,11 +92,11 @@ public class Recibo {
 		this.pagador = pagador;
 	}
 
-	public Servico getServico() {
+	public List<Servico> getServico() {
 		return servico;
 	}
 
-	public void setServico(Servico servico) {
+	public void setServico(List<Servico> servico) {
 		this.servico = servico;
 	}
 }
